@@ -1,1 +1,219 @@
+body {
 
+margin:0;
+font-family:Arial,sans-serif;
+background:#111;
+color:white;
+
+}
+
+
+header {
+
+text-align:center;
+padding:30px;
+background:#1a1a1a;
+animation:slide 1s;
+
+}
+
+
+header h1 {
+
+font-size:40px;
+color:gold;
+
+}
+
+
+
+input {
+
+padding:12px;
+width:250px;
+border-radius:8px;
+border:none;
+
+}
+
+
+button {
+
+padding:12px 20px;
+border:none;
+border-radius:8px;
+background:gold;
+cursor:pointer;
+transition:.3s;
+
+}
+
+
+button:hover {
+
+transform:scale(1.1);
+box-shadow:0 0 20px gold;
+
+}
+
+
+
+.products {
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:30px;
+
+}
+
+
+
+.card {
+
+background:#222;
+width:260px;
+padding:20px;
+text-align:center;
+border-radius:15px;
+animation:show 0.8s;
+transition:.4s;
+
+}
+
+
+
+.card:hover {
+
+transform:translateY(-10px);
+box-shadow:0 0 25px gold;
+
+}
+
+
+
+.card img {
+
+width:200px;
+height:200px;
+object-fit:contain;
+
+}
+
+
+
+.card h3 {
+
+color:gold;
+
+}
+
+
+
+.product-box {
+
+display:flex;
+gap:40px;
+background:#222;
+width:80%;
+margin:50px auto;
+padding:40px;
+border-radius:20px;
+animation:show .5s;
+
+}
+
+
+
+.product-image img {
+
+width:350px;
+height:350px;
+object-fit:contain;
+
+}
+
+
+
+.product-info {
+
+padding:20px;
+
+}
+
+
+
+.price {
+
+color:gold;
+font-size:40px;
+
+}
+
+
+
+.cart {
+
+background:#ff9900;
+
+}
+
+
+
+.buy {
+
+background:#ffd000;
+margin-left:10px;
+
+}
+
+
+
+footer {
+
+text-align:center;
+padding:20px;
+background:#000;
+
+}
+
+
+
+@keyframes show {
+
+from {
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to {
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+@keyframes slide {
+
+from {
+
+opacity:0;
+transform:translateY(-50px);
+
+}
+
+to {
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
