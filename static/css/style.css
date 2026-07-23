@@ -205,3 +205,86 @@ transform:translateY(0);
 .auth-btn:hover{
     background: #ffd700;
 }
+
+.feedback{
+    width:85%;
+    max-width:700px;
+    margin:60px auto;
+    padding:35px;
+    background:#1b1b1b;
+    border-radius:18px;
+    border:2px solid gold;
+    box-shadow:0 0 25px rgba(255,215,0,.25);
+}
+
+.feedback h2{
+    text-align:center;
+    color:gold;
+    margin-bottom:5px;
+    font-size:32px;
+}
+
+.feedback p{
+    text-align:center;
+    color:#ccc;
+    margin-bottom:25px;
+}
+
+.input-box{
+    margin-bottom:20px;
+}
+
+.input-box label{
+    display:block;
+    margin-bottom:8px;
+    color:gold;
+    font-weight:bold;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2b2b2b;
+    color:white;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.input-box textarea{
+    height:140px;
+    resize:none;
+}
+
+.feedback-btn{
+    width:100%;
+    padding:15px;
+    background:gold;
+    color:#111;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.feedback-btn:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 20px gold;
+}
+
+.success-message{
+    background:#28a745;
+    color:white;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:10px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    animation:show .5s;
+}
