@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Customer Feedback</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<h1>📋 Customer Feedback</h1>
+
+{% for f in feedbacks %}
+
+<h3>👤 {{ f[0] }}</h3>
+<p>⭐ {{ f[1] }}</p>
+<p>{{ f[2] }}</p>
+
+{% endfor %}
+
+</body>
+</html>
