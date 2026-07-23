@@ -97,6 +97,47 @@ placeholder="Search Cricket Products">
 
 </footer>
 
+<section class="feedback">
+
+{% if request.args.get('success') %}
+<div class="success-message">
+    🎉 Thanks for your feedback!
+</div>
+{% endif %}
+
+<h2>💬 Customer Feedback</h2>
+<p>We'd love to hear your experience!</p>
+
+<form action="/feedback" method="POST">
+
+<div class="input-box">
+<label>⭐ Rating</label>
+<select name="rating" required>
+<option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+<option value="4">⭐⭐⭐⭐ Very Good</option>
+<option value="3">⭐⭐⭐ Good</option>
+<option value="2">⭐⭐ Fair</option>
+<option value="1">⭐ Poor</option>
+</select>
+</div>
+
+<div class="input-box">
+<label>👤 Your Name</label>
+<input type="text" name="name" placeholder="Enter your name" required>
+</div>
+
+<div class="input-box">
+<label>💬 Your Feedback</label>
+<textarea name="message" placeholder="Tell us about your experience..." required></textarea>
+</div>
+
+<button class="feedback-btn" type="submit">
+🚀 Submit Feedback
+</button>
+
+</form>
+
+</section>
 
 </body>
 
