@@ -7,7 +7,6 @@ color:white;
 
 }
 
-
 header {
 
 text-align:center;
@@ -17,15 +16,12 @@ animation:slide 1s;
 
 }
 
-
 header h1 {
 
 font-size:40px;
 color:gold;
 
 }
-
-
 
 input {
 
@@ -35,7 +31,6 @@ border-radius:8px;
 border:none;
 
 }
-
 
 button {
 
@@ -48,15 +43,12 @@ transition:.3s;
 
 }
 
-
 button:hover {
 
 transform:scale(1.1);
 box-shadow:0 0 20px gold;
 
 }
-
-
 
 .products {
 
@@ -67,8 +59,6 @@ gap:25px;
 padding:30px;
 
 }
-
-
 
 .card {
 
@@ -82,16 +72,12 @@ transition:.4s;
 
 }
 
-
-
 .card:hover {
 
 transform:translateY(-10px);
 box-shadow:0 0 25px gold;
 
 }
-
-
 
 .card img {
 
@@ -101,15 +87,11 @@ object-fit:contain;
 
 }
 
-
-
 .card h3 {
 
 color:gold;
 
 }
-
-
 
 .product-box {
 
@@ -124,8 +106,6 @@ animation:show .5s;
 
 }
 
-
-
 .product-image img {
 
 width:350px;
@@ -134,15 +114,11 @@ object-fit:contain;
 
 }
 
-
-
 .product-info {
 
 padding:20px;
 
 }
-
-
 
 .price {
 
@@ -151,15 +127,11 @@ font-size:40px;
 
 }
 
-
-
 .cart {
 
 background:#ff9900;
 
 }
-
-
 
 .buy {
 
@@ -168,8 +140,6 @@ margin-left:10px;
 
 }
 
-
-
 footer {
 
 text-align:center;
@@ -177,8 +147,6 @@ padding:20px;
 background:#000;
 
 }
-
-
 
 @keyframes show {
 
@@ -198,8 +166,6 @@ transform:translateY(0);
 
 }
 
-
-
 @keyframes slide {
 
 from {
@@ -216,4 +182,26 @@ transform:translateY(0);
 
 }
 
+}
+
+.auth-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.auth-btn{
+    display: inline-block;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.auth-btn:hover{
+    background: #ffd700;
 }
