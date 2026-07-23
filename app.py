@@ -102,6 +102,24 @@ def create_table():
 
 create_table()
 
+def create_feedback_table():
+    conn = sqlite3.connect("users.db")
+    cur = conn.cursor()
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS feedback(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        rating TEXT,
+        message TEXT
+    )
+    """)
+
+    conn.commit()
+    conn.close()
+
+create_feedback_table()
+
 
 
 # Home Page
@@ -217,6 +235,45 @@ def logout():
 
     return redirect("/")
 
+@app.route("/feedback", methods=["POST"])
+def feedback():
+
+    conn = sqlite3.connect("users.db")
+    cur = conn.cursor()
+
+    cur.execute(
+        "INSERT INTO feedback(name,rating,message) VALUES(?,?,?)",
+        (
+            request.form["name"],
+            request.form["rating"],
+            request.form["message"]
+        )
+    )
+
+    conn.commit()
+    conn.close()
+
+    return redirect("/?success=1")
+
+
+@app.route("/admin-feedback")
+def admin_feedback():
+
+    if session.get("username") != "Love Pitamber (OWNER)":
+        return "Access Denied!"
+
+    conn = sqlite3.connect("users.db")
+    cur = conn.cursor()
+
+    cur.execute("SELECT name, rating, message FROM feedback ORDER BY id DESC")
+    feedbacks = cur.fetchall()
+
+    conn.close()
+
+    return render_template(
+        "admin_feedback.html",
+        feedbacks=feedbacks
+    )
 
 
 if __name__ == "__main__":
@@ -225,4 +282,4 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=4000,
         debug=True
-                          )
+        )
