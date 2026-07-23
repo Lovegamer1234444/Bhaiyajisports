@@ -35,25 +35,21 @@ placeholder="Search Cricket Products">
 </form>
 
 
-</header>
+</heade>
 
 {% if user %}
 
-<p>Welcome {{user}} 👋</p>
-
-<a href="/logout">
-Logout
-</a>
+<div class="auth-links">
+    <h3>👋 Welcome {{ user }}</h3>
+    <a class="auth-btn" href="/logout">Logout</a>
+</div>
 
 {% else %}
 
-<a href="/login">
-Login
-</a>
-
-<a href="/signup">
-Signup
-</a>
+<div class="auth-links">
+    <a class="auth-btn" href="/login">Login</a>
+    <a class="auth-btn" href="/signup">Signup</a>
+</div>
 
 {% endif %}
 
